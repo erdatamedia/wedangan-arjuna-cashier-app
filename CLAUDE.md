@@ -23,3 +23,7 @@
 
 - UI: React 19 + Vite + TypeScript (dipilih; Svelte tidak dipakai). TypeScript dipin ke 5.9 karena typescript-eslint belum mendukung TS 7.
 - Backend belum dipilih (Supabase vs PocketBase); ditunda di balik `SyncAdapter`, dikerjakan di fase 2.
+
+## Catatan teknis
+- Dexie `orderBy()`/`where()` hanya boleh pada kolom yang diindeks di skema. `fake-indexeddb` (Vitest) tidak menolak kolom tanpa indeks, tapi Chrome asli melempar `SchemaError`. Jadi setiap query baru wajib tercakup uji Playwright, atau urutkan di memori.
+- Uji e2e memakai build produksi; bila halaman kosong dan konsol hanya menampilkan `r`, bangun dengan `vite build --minify false` untuk melihat pesan aslinya.
