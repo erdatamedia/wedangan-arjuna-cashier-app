@@ -1,0 +1,421 @@
+{
+  "categories": [
+    {
+      "id": "nasi",
+      "name": "Nasi",
+      "group": "makanan",
+      "sort": 1
+    },
+    {
+      "id": "lalapan",
+      "name": "Lalapan",
+      "group": "makanan",
+      "sort": 2
+    },
+    {
+      "id": "mie",
+      "name": "Mie",
+      "group": "makanan",
+      "sort": 3
+    },
+    {
+      "id": "kudapan",
+      "name": "Kudapan / Snack",
+      "group": "makanan",
+      "sort": 4
+    },
+    {
+      "id": "wedang",
+      "name": "Wedang Sehat",
+      "group": "minuman",
+      "sort": 5
+    },
+    {
+      "id": "kopi",
+      "name": "Kopi & Susu",
+      "group": "minuman",
+      "sort": 6
+    },
+    {
+      "id": "teh",
+      "name": "Teh & Jeruk",
+      "group": "minuman",
+      "sort": 7
+    },
+    {
+      "id": "es",
+      "name": "Es Segar Tradisi",
+      "group": "minuman",
+      "sort": 8
+    },
+    {
+      "id": "stmj",
+      "name": "STMJ",
+      "group": "minuman",
+      "sort": 9
+    }
+  ],
+  "products": [
+    {
+      "sku": "NSI-01",
+      "category": "nasi",
+      "name": "Nasi Goreng Arjuna",
+      "price": 10000,
+      "favorite": true
+    },
+    {
+      "sku": "NSI-02",
+      "category": "nasi",
+      "name": "Soto Ayam Boyolali",
+      "price": 10000,
+      "favorite": true
+    },
+    {
+      "sku": "NSI-03",
+      "category": "nasi",
+      "name": "Nasi Goreng Telur",
+      "price": 12000,
+      "favorite": true
+    },
+    {
+      "sku": "NSI-04",
+      "category": "nasi",
+      "name": "Nasi Goreng Teri",
+      "price": 15000
+    },
+    {
+      "sku": "NSI-05",
+      "category": "nasi",
+      "name": "Nasi Goreng Mawut",
+      "price": 15000
+    },
+    {
+      "sku": "LLP-01",
+      "category": "lalapan",
+      "name": "Ayam Goreng",
+      "price": 23000
+    },
+    {
+      "sku": "LLP-02",
+      "category": "lalapan",
+      "name": "Ayam Goreng Laos",
+      "price": 25000,
+      "favorite": true
+    },
+    {
+      "sku": "MIE-01",
+      "category": "mie",
+      "name": "Indomie",
+      "price": 7000,
+      "variants": ["Goreng", "Kuah"],
+      "variantRequired": true
+    },
+    {
+      "sku": "MIE-02",
+      "category": "mie",
+      "name": "Indomie Telur",
+      "price": 10000
+    },
+    {
+      "sku": "MIE-03",
+      "category": "mie",
+      "name": "Bakmie Godok Jawa",
+      "price": 13000
+    },
+    {
+      "sku": "MIE-04",
+      "category": "mie",
+      "name": "Bakmie Goreng Jawa",
+      "price": 13000
+    },
+    {
+      "sku": "MIE-05",
+      "category": "mie",
+      "name": "Bakmie Nyemek Arjuna",
+      "price": 13000,
+      "favorite": true
+    },
+    {
+      "sku": "KDP-01",
+      "category": "kudapan",
+      "name": "Tempe Mendoan (isi 4)",
+      "price": 5000
+    },
+    {
+      "sku": "KDP-02",
+      "category": "kudapan",
+      "name": "Tempura (Mix)",
+      "price": 8000
+    },
+    {
+      "sku": "KDP-03",
+      "category": "kudapan",
+      "name": "Kentang Goreng",
+      "price": 8000
+    },
+    {
+      "sku": "WDG-01",
+      "category": "wedang",
+      "name": "Wedang Jahe Arjuna",
+      "price": 7000
+    },
+    {
+      "sku": "WDG-02",
+      "category": "wedang",
+      "name": "Wedang Jahe Gula Aren",
+      "price": 8000
+    },
+    {
+      "sku": "WDG-03",
+      "category": "wedang",
+      "name": "Wedang Jahe Rempah Spesial",
+      "price": 10000
+    },
+    {
+      "sku": "WDG-04",
+      "category": "wedang",
+      "name": "Wedang Kunir Asem Rempah",
+      "price": 10000
+    },
+    {
+      "sku": "WDG-05",
+      "category": "wedang",
+      "name": "Wedang Rempah Rapet Wangi",
+      "price": 10000
+    },
+    {
+      "sku": "WDG-06",
+      "category": "wedang",
+      "name": "Wedang Rempah Sapu Angin",
+      "price": 12000
+    },
+    {
+      "sku": "WDG-07",
+      "category": "wedang",
+      "name": "Wedang Susu Kunir Rempah",
+      "price": 10000
+    },
+    {
+      "sku": "WDG-08",
+      "category": "wedang",
+      "name": "Wedang Susu Jahe Rempah",
+      "price": 10000
+    },
+    {
+      "sku": "WDG-09",
+      "category": "wedang",
+      "name": "Wedang Uwuh Arjuna",
+      "price": 10000
+    },
+    {
+      "sku": "WDG-10",
+      "category": "wedang",
+      "name": "Wedang Sehat Pria",
+      "price": 10000
+    },
+    {
+      "sku": "WDG-11",
+      "category": "wedang",
+      "name": "Wedang Rempah Pegal Linu",
+      "price": 12000
+    },
+    {
+      "sku": "WDG-12",
+      "category": "wedang",
+      "name": "Wedang Rempah Pelangsing",
+      "price": 13000
+    },
+    {
+      "sku": "WDG-13",
+      "category": "wedang",
+      "name": "Wedang Sehat Datang Bulan",
+      "price": 13000
+    },
+    {
+      "sku": "WDG-14",
+      "category": "wedang",
+      "name": "Wedang Rempah Stamina",
+      "price": 15000
+    },
+    {
+      "sku": "KPS-01",
+      "category": "kopi",
+      "name": "Kopi Rakyat",
+      "price": 4000
+    },
+    {
+      "sku": "KPS-02",
+      "category": "kopi",
+      "name": "Kopi Robusta",
+      "price": 6000
+    },
+    {
+      "sku": "KPS-03",
+      "category": "kopi",
+      "name": "Kopi Robusta Rempah",
+      "price": 8000
+    },
+    {
+      "sku": "KPS-04",
+      "category": "kopi",
+      "name": "Susu Hangat",
+      "price": 8000
+    },
+    {
+      "sku": "KPS-05",
+      "category": "kopi",
+      "name": "Kopi Gula Aren",
+      "price": 10000
+    },
+    {
+      "sku": "KPS-06",
+      "category": "kopi",
+      "name": "Kopi Arabika",
+      "price": 10000
+    },
+    {
+      "sku": "KPS-07",
+      "category": "kopi",
+      "name": "Susu Coklat Hangat",
+      "price": 10000
+    },
+    {
+      "sku": "KPS-08",
+      "category": "kopi",
+      "name": "Kopi Susu Jahe",
+      "price": 12000
+    },
+    {
+      "sku": "KPS-09",
+      "category": "kopi",
+      "name": "Kopi Arabika Rempah",
+      "price": 12000
+    },
+    {
+      "sku": "TJR-01",
+      "category": "teh",
+      "name": "Teh Hangat",
+      "price": 5000
+    },
+    {
+      "sku": "TJR-02",
+      "category": "teh",
+      "name": "Teh Kampul",
+      "price": 7000
+    },
+    {
+      "sku": "TJR-03",
+      "category": "teh",
+      "name": "Teh Ginastel Gula Batu",
+      "price": 8000
+    },
+    {
+      "sku": "TJR-04",
+      "category": "teh",
+      "name": "Teh Sereh Rempah",
+      "price": 10000
+    },
+    {
+      "sku": "TJR-05",
+      "category": "teh",
+      "name": "Teh Susu Rempah",
+      "price": 12000
+    },
+    {
+      "sku": "TJR-06",
+      "category": "teh",
+      "name": "Wedang Jeruk",
+      "price": 8000
+    },
+    {
+      "sku": "TJR-07",
+      "category": "teh",
+      "name": "Wedang Teh Lemon Gula Batu",
+      "price": 10000
+    },
+    {
+      "sku": "ESG-01",
+      "category": "es",
+      "name": "Es Teh Manis",
+      "price": 5000
+    },
+    {
+      "sku": "ESG-02",
+      "category": "es",
+      "name": "Es Lemon Tea",
+      "price": 8000
+    },
+    {
+      "sku": "ESG-03",
+      "category": "es",
+      "name": "Es Susu",
+      "price": 8000
+    },
+    {
+      "sku": "ESG-04",
+      "category": "es",
+      "name": "Es Jeruk",
+      "price": 10000
+    },
+    {
+      "sku": "ESG-05",
+      "category": "es",
+      "name": "Es Susu Jahe Rempah",
+      "price": 10000
+    },
+    {
+      "sku": "ESG-06",
+      "category": "es",
+      "name": "Es Kunir Asem",
+      "price": 10000
+    },
+    {
+      "sku": "ESG-07",
+      "category": "es",
+      "name": "Es Susu Kunir Rempah",
+      "price": 10000
+    },
+    {
+      "sku": "ESG-08",
+      "category": "es",
+      "name": "Es Coklat Rempah",
+      "price": 10000
+    },
+    {
+      "sku": "ESG-09",
+      "category": "es",
+      "name": "Es Jahe Rempah",
+      "price": 10000
+    },
+    {
+      "sku": "ESG-10",
+      "category": "es",
+      "name": "Es Teh Susu Rempah",
+      "price": 10000
+    },
+    {
+      "sku": "ESG-11",
+      "category": "es",
+      "name": "Es Teh Sereh Rempah",
+      "price": 10000
+    },
+    {
+      "sku": "STM-01",
+      "category": "stmj",
+      "name": "STMJ Rempah",
+      "price": 13000
+    },
+    {
+      "sku": "STM-02",
+      "category": "stmj",
+      "name": "STMJ Coklat Rempah",
+      "price": 16000
+    },
+    {
+      "sku": "STM-03",
+      "category": "stmj",
+      "name": "STMJ Rempah Stamina",
+      "price": 18000
+    }
+  ]
+}

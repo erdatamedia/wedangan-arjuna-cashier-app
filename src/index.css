@@ -1,0 +1,24 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-coklat: #3b2216;
+  --color-emas: #c9963b;
+  --color-krem: #f6efe6;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  background: var(--color-krem);
+  color: var(--color-coklat);
+  font-family:
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    sans-serif;
+}
