@@ -53,7 +53,7 @@ export function CartScreen({ cart, dispatch, meta, onMeta, onBack, onPay }: Prop
       ) : (
         <ul className="mt-2 space-y-2">
           {cart.map((l) => (
-            <li key={l.key} className="rounded-xl bg-white p-3 shadow-sm">
+            <li key={l.key} className="clay p-3">
               <div className="flex items-start justify-between gap-2">
                 <div>
                   <p className="font-semibold leading-tight">
@@ -69,7 +69,7 @@ export function CartScreen({ cart, dispatch, meta, onMeta, onBack, onPay }: Prop
                 aria-label={`Catatan ${l.name}`}
                 onChange={(e) => dispatch({ type: 'setNote', key: l.key, note: e.target.value })}
                 placeholder="Catatan…"
-                className="mt-2 min-h-11 w-full rounded-lg border border-stone-200 px-3 text-sm"
+                className="mt-2 min-h-11 w-full clay-inset px-3 text-sm"
               />
               <div className="mt-2 flex items-center justify-between">
                 <div className="flex items-center gap-2">
@@ -77,7 +77,7 @@ export function CartScreen({ cart, dispatch, meta, onMeta, onBack, onPay }: Prop
                     type="button"
                     aria-label={`Kurangi ${l.name}`}
                     onClick={() => dispatch({ type: 'setQty', key: l.key, qty: l.qty - 1 })}
-                    className="min-h-11 min-w-11 rounded-full bg-krem text-2xl ring-1 ring-emas/60"
+                    className="min-h-11 min-w-11 rounded-full clay-btn text-2xl"
                   >
                     −
                   </button>
@@ -86,7 +86,7 @@ export function CartScreen({ cart, dispatch, meta, onMeta, onBack, onPay }: Prop
                     type="button"
                     aria-label={`Tambah ${l.name}`}
                     onClick={() => dispatch({ type: 'setQty', key: l.key, qty: l.qty + 1 })}
-                    className="min-h-11 min-w-11 rounded-full bg-krem text-2xl ring-1 ring-emas/60"
+                    className="min-h-11 min-w-11 rounded-full clay-btn text-2xl"
                   >
                     +
                   </button>
@@ -104,7 +104,7 @@ export function CartScreen({ cart, dispatch, meta, onMeta, onBack, onPay }: Prop
         </ul>
       )}
 
-      <div className="mt-4 space-y-2 rounded-xl bg-white p-3 shadow-sm">
+      <div className="mt-4 space-y-2 clay p-3">
         <div className="flex gap-2" role="radiogroup" aria-label="Tipe pesanan">
           {TYPES.map((t) => (
             <button
@@ -114,7 +114,7 @@ export function CartScreen({ cart, dispatch, meta, onMeta, onBack, onPay }: Prop
               aria-checked={meta.orderType === t.id}
               onClick={() => onMeta({ ...meta, orderType: t.id })}
               className={`min-h-11 flex-1 rounded-lg px-1 text-xs font-semibold ${
-                meta.orderType === t.id ? 'bg-coklat text-white' : 'bg-krem ring-1 ring-emas/50'
+                meta.orderType === t.id ? 'clay-btn-coklat' : 'clay-btn'
               }`}
             >
               {t.label}
@@ -127,14 +127,14 @@ export function CartScreen({ cart, dispatch, meta, onMeta, onBack, onPay }: Prop
             onChange={(e) => onMeta({ ...meta, tableNo: e.target.value })}
             placeholder="No. meja"
             aria-label="Nomor meja"
-            className="min-h-11 w-28 rounded-lg border border-stone-200 px-3"
+            className="min-h-11 w-28 clay-inset px-3"
           />
           <input
             value={meta.customerName}
             onChange={(e) => onMeta({ ...meta, customerName: e.target.value })}
             placeholder="Nama pelanggan"
             aria-label="Nama pelanggan"
-            className="min-h-11 flex-1 rounded-lg border border-stone-200 px-3"
+            className="min-h-11 flex-1 clay-inset px-3"
           />
         </div>
       </div>
@@ -147,7 +147,7 @@ export function CartScreen({ cart, dispatch, meta, onMeta, onBack, onPay }: Prop
         type="button"
         disabled={cart.length === 0}
         onClick={onPay}
-        className="mt-3 min-h-14 w-full rounded-xl bg-coklat text-xl font-bold text-white disabled:opacity-40"
+        className="mt-3 min-h-14 w-full clay-btn-coklat text-xl font-bold text-white disabled:opacity-40"
       >
         Bayar
       </button>

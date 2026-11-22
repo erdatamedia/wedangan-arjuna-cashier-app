@@ -11,7 +11,7 @@ const LAST_BACKUP_KEY = 'last-backup-at'
 
 function Card({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <section className="mt-4 rounded-xl bg-white p-4 shadow-sm">
+    <section className="mt-4 clay p-4">
       <h3 className="font-bold">{title}</h3>
       <div className="mt-2 space-y-2 text-sm">{children}</div>
     </section>
@@ -86,14 +86,14 @@ export function SettingsScreen({ persisted }: { persisted: boolean | null }) {
           <button
             type="button"
             onClick={doExport}
-            className="min-h-12 flex-1 rounded-xl bg-coklat font-bold text-white"
+            className="min-h-12 flex-1 clay-btn-coklat font-bold text-white"
           >
             Ekspor cadangan
           </button>
           <button
             type="button"
             onClick={() => importRef.current?.click()}
-            className="min-h-12 flex-1 rounded-xl bg-white font-bold ring-1 ring-emas/60"
+            className="min-h-12 flex-1 rounded-xl clay-btn font-bold"
           >
             Impor cadangan
           </button>
@@ -122,7 +122,7 @@ export function SettingsScreen({ persisted }: { persisted: boolean | null }) {
           <button
             type="button"
             onClick={() => qrisRef.current?.click()}
-            className="min-h-11 flex-1 rounded-xl bg-white font-semibold ring-1 ring-emas/60"
+            className="min-h-11 flex-1 rounded-xl clay-btn font-semibold"
           >
             {qris ? 'Ganti gambar' : 'Unggah gambar'}
           </button>
@@ -130,7 +130,7 @@ export function SettingsScreen({ persisted }: { persisted: boolean | null }) {
             <button
               type="button"
               onClick={() => run(async () => (await clearQrisImage(db), 'Gambar QRIS dihapus.'))}
-              className="min-h-11 rounded-xl px-4 font-semibold text-red-800 ring-1 ring-red-300"
+              className="min-h-11 clay-btn px-4 font-semibold text-red-800"
             >
               Hapus
             </button>

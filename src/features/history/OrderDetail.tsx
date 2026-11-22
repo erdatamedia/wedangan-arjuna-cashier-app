@@ -21,11 +21,14 @@ function VoidDialog({
   const reason = choice === OTHER ? text.trim() : choice
 
   return (
-    <div className="fixed inset-0 z-40 flex items-end bg-black/50" onClick={onCancel}>
+    <div
+      className="fixed inset-0 z-40 flex items-end bg-coklat/40 backdrop-blur-sm"
+      onClick={onCancel}
+    >
       <div
         role="dialog"
         aria-label="Batalkan transaksi"
-        className="mx-auto w-full max-w-md rounded-t-2xl bg-krem p-4 pb-6"
+        className="mx-auto w-full max-w-md clay-sheet p-4 pb-6"
         onClick={(e) => e.stopPropagation()}
       >
         <h3 className="text-lg font-bold">Batalkan transaksi?</h3>
@@ -42,7 +45,7 @@ function VoidDialog({
               aria-checked={choice === r}
               onClick={() => setChoice(r)}
               className={`min-h-11 w-full rounded-xl px-4 text-left font-semibold ${
-                choice === r ? 'bg-coklat text-white' : 'bg-white ring-1 ring-emas/50'
+                choice === r ? 'clay-btn-coklat' : 'clay-btn'
               }`}
             >
               {r}
@@ -54,7 +57,7 @@ function VoidDialog({
               onChange={(e) => setText(e.target.value)}
               placeholder="Tulis alasan"
               aria-label="Alasan lainnya"
-              className="min-h-11 w-full rounded-xl border border-emas/50 bg-white px-3"
+              className="min-h-11 w-full clay-inset px-3"
             />
           )}
         </div>
@@ -67,7 +70,7 @@ function VoidDialog({
           <button
             type="button"
             onClick={onCancel}
-            className="min-h-12 flex-1 rounded-xl bg-white font-bold ring-1 ring-stone-300"
+            className="min-h-12 flex-1 rounded-xl clay-btn font-bold"
           >
             Kembali
           </button>
@@ -83,7 +86,7 @@ function VoidDialog({
                 setBusy(false)
               }
             }}
-            className="min-h-12 flex-1 rounded-xl bg-red-700 font-bold text-white disabled:opacity-40"
+            className="min-h-12 flex-1 clay-btn-red font-bold text-white disabled:opacity-40"
           >
             Batalkan
           </button>
@@ -118,7 +121,7 @@ export function OrderDetail({ orderId, onBack }: { orderId: string; onBack: () =
         <button
           type="button"
           onClick={() => setVoiding(true)}
-          className="mt-3 min-h-12 w-full rounded-xl font-bold text-red-800 ring-1 ring-red-300"
+          className="mt-3 min-h-12 w-full clay-btn font-bold text-red-800"
         >
           Batalkan transaksi
         </button>

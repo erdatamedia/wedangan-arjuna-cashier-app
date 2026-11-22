@@ -34,12 +34,12 @@ export function HistoryScreen() {
           max={todayWib()}
           onChange={(e) => e.target.value && setDate(e.target.value)}
           aria-label="Tanggal"
-          className="min-h-11 rounded-lg border border-emas/50 bg-white px-2"
+          className="min-h-11 clay-inset px-2"
         />
       </div>
 
       {summary && (
-        <section aria-label="Rekap harian" className="mt-3 rounded-xl bg-coklat p-4 text-white">
+        <section aria-label="Rekap harian" className="mt-3 clay-dark p-4">
           <p className="text-sm text-white/80">Omzet</p>
           <p className="text-3xl font-extrabold tabular-nums" data-testid="summary-revenue">
             {formatRupiah(summary.revenue)}
@@ -80,7 +80,7 @@ export function HistoryScreen() {
             <button
               type="button"
               onClick={() => setOpenId(o.id)}
-              className="flex min-h-14 w-full items-center justify-between rounded-xl bg-white p-3 text-left shadow-sm"
+              className="flex min-h-14 w-full items-center justify-between clay-btn p-3 text-left"
             >
               <span>
                 <span className="block font-semibold">{o.number}</span>

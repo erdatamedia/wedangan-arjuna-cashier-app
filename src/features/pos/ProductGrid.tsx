@@ -54,8 +54,8 @@ function ProductCard({
         if (fired.current) return
         onTap()
       }}
-      className={`relative flex min-h-24 select-none flex-col justify-between rounded-xl border p-3 text-left shadow-sm active:scale-[0.98] ${
-        soldOut ? 'border-stone-300 bg-stone-200 text-stone-500' : 'border-emas/40 bg-white'
+      className={`relative flex min-h-24 select-none flex-col justify-between p-3 text-left ${
+        soldOut ? 'clay-inset text-stone-500' : 'clay-btn'
       }`}
     >
       <span className="text-sm font-semibold leading-tight">{product.name}</span>
@@ -69,7 +69,7 @@ function ProductCard({
         </span>
       )}
       {qty > 0 && (
-        <span className="absolute -right-1.5 -top-1.5 flex h-7 min-w-7 items-center justify-center rounded-full bg-coklat px-1 text-sm font-bold text-white">
+        <span className="absolute -right-1.5 -top-1.5 flex h-7 min-w-7 items-center justify-center rounded-full clay-btn-coklat px-1 text-sm font-bold text-white">
           {qty}
         </span>
       )}
@@ -106,7 +106,7 @@ export function ProductGrid({ categories, products, soldOut, cart, onTap, onLong
         onChange={(e) => setQuery(e.target.value)}
         placeholder="Cari menu…"
         aria-label="Cari menu"
-        className="min-h-11 w-full rounded-xl border border-emas/50 bg-white px-4"
+        className="min-h-11 w-full clay-inset px-4"
       />
       <div className="-mx-4 mt-3 flex gap-2 overflow-x-auto px-4 pb-1" role="tablist">
         {chips.map((c) => (
@@ -120,9 +120,7 @@ export function ProductGrid({ categories, products, soldOut, cart, onTap, onLong
               setQuery('')
             }}
             className={`min-h-11 shrink-0 rounded-full px-4 text-sm font-semibold ${
-              chip === c.id && !query
-                ? 'bg-coklat text-white'
-                : 'bg-white text-coklat ring-1 ring-emas/50'
+              chip === c.id && !query ? 'clay-btn-coklat' : 'clay-btn'
             }`}
           >
             {c.name}
@@ -132,7 +130,7 @@ export function ProductGrid({ categories, products, soldOut, cart, onTap, onLong
       {visible.length === 0 ? (
         <p className="mt-8 text-center text-stone-500">Menu tidak ditemukan.</p>
       ) : (
-        <div className="mt-3 grid grid-cols-2 gap-3 pb-28">
+        <div className="mt-3 grid grid-cols-2 gap-4 pb-40">
           {visible.map((p) => (
             <ProductCard
               key={p.id}

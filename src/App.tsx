@@ -30,8 +30,8 @@ export default function App() {
   }, [])
 
   return (
-    <div className="mx-auto min-h-dvh max-w-md pb-20">
-      <header className="sticky top-0 z-30 bg-coklat text-white">
+    <div className="mx-auto min-h-dvh max-w-md pb-28">
+      <header className="sticky top-0 z-30 clay-header text-white">
         <div className="flex min-h-12 items-center justify-between px-4">
           <h1 className="font-bold">Wedangan Arjuna</h1>
           <span
@@ -72,17 +72,17 @@ export default function App() {
 
       <nav
         aria-label="Navigasi utama"
-        className="fixed inset-x-0 bottom-0 z-30 border-t border-emas/40 bg-krem pb-[env(safe-area-inset-bottom)]"
+        className="fixed inset-x-0 bottom-0 z-30 px-3 pb-[max(0.75rem,env(safe-area-inset-bottom))]"
       >
-        <div className="mx-auto flex max-w-md">
+        <div className="clay mx-auto flex max-w-md gap-1 rounded-3xl p-1.5">
           {TABS.map((t) => (
             <button
               key={t.id}
               type="button"
               aria-current={tab === t.id ? 'page' : undefined}
               onClick={() => setTab(t.id)}
-              className={`flex min-h-14 flex-1 flex-col items-center justify-center text-xs font-semibold ${
-                tab === t.id ? 'text-coklat' : 'text-stone-500'
+              className={`flex min-h-14 flex-1 flex-col items-center justify-center rounded-2xl text-xs font-semibold ${
+                tab === t.id ? 'clay-inset text-coklat' : 'text-stone-500'
               }`}
             >
               <span aria-hidden className="text-xl">

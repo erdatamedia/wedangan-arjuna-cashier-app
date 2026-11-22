@@ -82,7 +82,7 @@ export function PayScreen({ total, onBack, onConfirm }: Props) {
             aria-selected={method === m.id}
             onClick={() => setMethod(m.id)}
             className={`min-h-11 flex-1 rounded-xl font-semibold ${
-              method === m.id ? 'bg-coklat text-white' : 'bg-white ring-1 ring-emas/50'
+              method === m.id ? 'clay-btn-coklat' : 'clay-btn'
             }`}
           >
             {m.label}
@@ -98,14 +98,14 @@ export function PayScreen({ total, onBack, onConfirm }: Props) {
                 key={v}
                 type="button"
                 onClick={() => setDigits(String(v))}
-                className="min-h-11 rounded-full bg-white px-4 text-sm font-semibold tabular-nums ring-1 ring-emas/60"
+                className="min-h-11 rounded-full clay-btn px-4 text-sm font-semibold tabular-nums"
               >
                 {v === total ? 'Uang pas' : formatRupiah(v).replace('Rp ', '')}
               </button>
             ))}
           </div>
           <p
-            className="mt-3 rounded-xl bg-white p-3 text-right text-2xl font-bold tabular-nums"
+            className="mt-3 clay-inset p-3 text-right text-2xl font-bold tabular-nums"
             aria-label="Uang diterima"
           >
             {formatRupiah(tendered)}
@@ -125,7 +125,7 @@ export function PayScreen({ total, onBack, onConfirm }: Props) {
                 type="button"
                 onClick={() => press(k)}
                 aria-label={k === '⌫' ? 'Hapus angka' : k}
-                className="min-h-12 rounded-xl bg-white text-2xl font-semibold ring-1 ring-stone-200 active:bg-stone-100"
+                className="min-h-12 rounded-xl clay-btn text-2xl font-semibold"
               >
                 {k}
               </button>
@@ -136,11 +136,7 @@ export function PayScreen({ total, onBack, onConfirm }: Props) {
         <div className="mt-3 space-y-3">
           {method === 'qris' &&
             (qris ? (
-              <img
-                src={qris}
-                alt="QRIS toko"
-                className="mx-auto max-h-72 rounded-xl bg-white p-2"
-              />
+              <img src={qris} alt="QRIS toko" className="mx-auto max-h-72 clay-sm p-2" />
             ) : (
               <p className="rounded-xl bg-amber-100 p-3 text-sm text-amber-900">
                 Gambar QRIS belum diunggah. Unggah di Lainnya → Pengaturan, atau tunjukkan QRIS
@@ -155,7 +151,7 @@ export function PayScreen({ total, onBack, onConfirm }: Props) {
             onChange={(e) => setReference(e.target.value)}
             placeholder="Nomor referensi (opsional)"
             aria-label="Nomor referensi"
-            className="min-h-11 w-full rounded-xl border border-emas/50 bg-white px-3"
+            className="min-h-11 w-full clay-inset px-3"
           />
         </div>
       )}
@@ -165,12 +161,12 @@ export function PayScreen({ total, onBack, onConfirm }: Props) {
           {error}
         </p>
       )}
-      <div className="fixed inset-x-0 bottom-16 z-20 px-4">
+      <div className="fixed inset-x-0 bottom-24 z-20 px-4">
         <button
           type="button"
           disabled={!canSubmit}
           onClick={submit}
-          className="mx-auto block min-h-14 w-full max-w-md rounded-xl bg-coklat text-xl font-bold text-white shadow-lg disabled:opacity-40"
+          className="mx-auto block min-h-14 w-full max-w-md clay-btn-coklat text-xl font-bold text-white disabled:opacity-40"
         >
           {busy ? 'Menyimpan…' : method === 'cash' ? 'Selesaikan' : 'Sudah dibayar'}
         </button>

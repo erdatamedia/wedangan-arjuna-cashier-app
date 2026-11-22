@@ -106,12 +106,12 @@ export function PosScreen() {
             onLongPress={setSheet}
           />
           {count > 0 && (
-            <div className="fixed inset-x-0 bottom-16 z-20 px-4">
+            <div className="fixed inset-x-0 bottom-24 z-20 px-4">
               <button
                 type="button"
                 data-testid="cart-bar"
                 onClick={() => setStep('cart')}
-                className="mx-auto flex min-h-14 w-full max-w-md items-center justify-between rounded-2xl bg-coklat px-5 text-lg font-bold text-white shadow-lg"
+                className="mx-auto flex min-h-14 w-full max-w-md items-center justify-between clay-btn-coklat px-5 text-lg font-bold text-white"
               >
                 <span>{count} item</span>
                 <span className="tabular-nums">{formatRupiah(subtotal)} ›</span>

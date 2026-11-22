@@ -21,7 +21,7 @@ export function ReceiptView({
     <div>
       <pre
         data-testid="receipt"
-        className="print-area mx-auto w-fit overflow-x-auto rounded-lg bg-white p-3 font-mono text-[13px] leading-snug shadow-sm"
+        className="print-area mx-auto w-fit overflow-x-auto clay-sm p-3 font-mono text-[13px] leading-snug"
       >
         {text}
       </pre>
@@ -34,14 +34,14 @@ export function ReceiptView({
               how === 'cancelled' ? null : how === 'whatsapp' ? 'Dibuka lewat WhatsApp' : null,
             )
           }}
-          className="min-h-12 flex-1 rounded-xl bg-green-700 font-bold text-white"
+          className="min-h-12 flex-1 clay-btn-green font-bold text-white"
         >
           Bagikan (WhatsApp)
         </button>
         <button
           type="button"
           onClick={() => window.print()}
-          className="min-h-12 flex-1 rounded-xl bg-white font-bold ring-1 ring-emas/60"
+          className="min-h-12 flex-1 rounded-xl clay-btn font-bold"
         >
           Cetak
         </button>
